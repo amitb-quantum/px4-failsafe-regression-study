@@ -1,0 +1,21 @@
+{"label": "B-04", "scenario_exit": 0, "shutdown": "clean", "ulog": "2026-10-24_00_16_33.ulg", "abort": null, "evidence_problem": null}
+log duration: 70.0s
+
+vehicle_status timeline (changes only):
+  t=  -0.13s  nav_state= 4 (AUTO_LOITER)  arming_state=1  failsafe=0
+  t=  20.04s  nav_state= 2 (POSCTL)  arming_state=1  failsafe=0
+  t=  24.78s  nav_state= 2 (POSCTL)  arming_state=2  failsafe=0
+  t=  29.78s  nav_state= 1 (ALTCTL)  arming_state=2  failsafe=1
+  t=  34.76s  nav_state=15 (STAB)  arming_state=2  failsafe=1
+  t=  41.03s  nav_state=13 (TERMINATION)  arming_state=2  failsafe=1
+
+manual_control_setpoint: 108 logged samples; valid MAVLink (valid=1, data_source=2): 106
+  valid values seen: [0, 1]; data_source values seen: [0, 2]  (2=MAVLink instance 0)
+  first valid t=20.03s, last valid t=40.80s
+
+failsafe_flags.manual_control_signal_lost transitions: t=-0.04s->1, t=20.04s->0, t=41.02s->1
+  RC loss after stream: set at t=41.02s (0.22s after last valid sample)
+  other failsafe flags rising after arming (t=24.78s): ['local_altitude_invalid@34.74s', 'local_position_invalid@29.76s', 'local_position_invalid_relaxed@29.76s', 'local_velocity_invalid@29.76s', 'global_position_invalid@29.76s', 'battery_unhealthy@29.88s']
+
+ground-truth altitude: 7.33 m at last valid sample; after it min -0.02 m, max 7.58 m, at log end -0.02 m
+

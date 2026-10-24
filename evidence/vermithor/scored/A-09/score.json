@@ -1,0 +1,41 @@
+{
+ "run": "A-09",
+ "valid": true,
+ "invalid_reason": null,
+ "outcome": "DEPARTED_RTL",
+ "build": "A",
+ "scenario_exit": 0,
+ "ulog": "2026-10-24_00_35_58.ulg",
+ "valid_mc_samples": 106,
+ "t_arm": 24.792,
+ "last_valid_mc": 40.812,
+ "t_loss": 41.1,
+ "loss_lag_s": 0.288,
+ "alt_at_loss_m": 6.94,
+ "mode_sequence": [
+  {
+   "t": 41.1,
+   "nav": "POSCTL",
+   "armed": true
+  },
+  {
+   "t": 41.112,
+   "nav": "AUTO_LOITER",
+   "armed": true
+  },
+  {
+   "t": 46.116,
+   "nav": "AUTO_RTL",
+   "armed": true
+  },
+  {
+   "t": 61.488,
+   "nav": "POSCTL",
+   "armed": false
+  }
+ ],
+ "t_loss_to_hold_s": 0.012,
+ "hold_before_departure_s": 5.004,
+ "window_end": 66.1,
+ "log_end": 62.488
+}

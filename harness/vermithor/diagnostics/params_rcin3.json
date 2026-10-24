@@ -1,0 +1,45 @@
+{
+  "_comment": "POST-EXPERIMENT DIAGNOSTIC (2026-10-24), not scored: identical to frozen params.json except COM_RC_IN_MODE=3 (VM default).",
+  "params": {
+    "NAV_RCL_ACT": {
+      "value": 1,
+      "type": "int",
+      "why": "RC-loss action = Hold (1). Default 2 = Return."
+    },
+    "COM_RC_IN_MODE": {
+      "value": 3,
+      "type": "int",
+      "why": "Diagnostic: RC or Joystick keep first (VM default). Frozen batch used 1."
+    },
+    "COM_RC_LOSS_T": {
+      "value": 0.5,
+      "type": "float",
+      "why": "Manual-control loss timeout, s (default 0.5)."
+    },
+    "COM_FAIL_ACT_T": {
+      "value": 5.0,
+      "type": "float",
+      "why": "Failsafe action delay (Hold before action), s (default 5)."
+    },
+    "COM_RCL_EXCEPT": {
+      "value": 0,
+      "type": "int",
+      "why": "No RC-loss exceptions (default 0)."
+    },
+    "NAV_DLL_ACT": {
+      "value": 0,
+      "type": "int",
+      "why": "Datalink-loss action disabled (default 0); telemetry stays alive anyway."
+    },
+    "COM_DL_LOSS_T": {
+      "value": 10,
+      "type": "int",
+      "why": "Datalink-loss timeout, s (default 10)."
+    },
+    "COM_DISARM_PRFLT": {
+      "value": 10.0,
+      "type": "float",
+      "why": "Auto-disarm if no takeoff within 10 s of arming (default)."
+    }
+  }
+}

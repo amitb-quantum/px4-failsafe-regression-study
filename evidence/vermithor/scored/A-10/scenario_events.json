@@ -1,0 +1,204 @@
+{
+ "constants": {
+  "RATE_HZ": 20.0,
+  "PRE_STREAM_S": 3.0,
+  "CLIMB_S": 8.0,
+  "NEUTRAL_S": 6.0,
+  "OBSERVE_S": 30.0,
+  "Z_NEUTRAL": 500,
+  "Z_CLIMB": 850
+ },
+ "events": [
+  {
+   "wall_s": 0.497,
+   "px4_boot_ms": null,
+   "event": "heartbeat",
+   "sysid": 1
+  },
+  {
+   "wall_s": 0.497,
+   "px4_boot_ms": null,
+   "event": "mc_stream_start",
+   "z": 500
+  },
+  {
+   "wall_s": 1.518,
+   "px4_boot_ms": 21068,
+   "event": "heartbeat_change",
+   "main_mode": 3,
+   "sub_mode": 0,
+   "armed": false
+  },
+  {
+   "wall_s": 3.512,
+   "px4_boot_ms": 23016,
+   "event": "command_ack",
+   "command": 176,
+   "result": 0
+  },
+  {
+   "wall_s": 5.498,
+   "px4_boot_ms": 24964,
+   "event": "posctl_confirmed"
+  },
+  {
+   "wall_s": 5.51,
+   "px4_boot_ms": 24980,
+   "event": "command_ack",
+   "command": 400,
+   "result": 0
+  },
+  {
+   "wall_s": 5.51,
+   "px4_boot_ms": 24980,
+   "event": "statustext",
+   "severity": 6,
+   "text": "Armed by external command\t"
+  },
+  {
+   "wall_s": 5.604,
+   "px4_boot_ms": 25068,
+   "event": "heartbeat_change",
+   "main_mode": 3,
+   "sub_mode": 0,
+   "armed": true
+  },
+  {
+   "wall_s": 7.498,
+   "px4_boot_ms": 26924,
+   "event": "armed_confirmed",
+   "attempts": 1,
+   "main_mode": 3
+  },
+  {
+   "wall_s": 7.498,
+   "px4_boot_ms": 26924,
+   "event": "climb",
+   "z": 850,
+   "seconds": 8.0
+  },
+  {
+   "wall_s": 8.327,
+   "px4_boot_ms": 27724,
+   "event": "statustext",
+   "severity": 6,
+   "text": "Takeoff detected\t"
+  },
+  {
+   "wall_s": 15.498,
+   "px4_boot_ms": 34748,
+   "event": "neutral",
+   "z": 500,
+   "seconds": 6.0
+  },
+  {
+   "wall_s": 21.499,
+   "px4_boot_ms": 40616,
+   "event": "mc_stream_stop",
+   "main_mode": 3,
+   "armed": true
+  },
+  {
+   "wall_s": 22.185,
+   "px4_boot_ms": 41284,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Failsafe activated, entering Hold for 5 seconds\t"
+  },
+  {
+   "wall_s": 22.978,
+   "px4_boot_ms": 42068,
+   "event": "heartbeat_change",
+   "main_mode": 4,
+   "sub_mode": 3,
+   "armed": true
+  },
+  {
+   "wall_s": 27.303,
+   "px4_boot_ms": 46304,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Failsafe activated\t"
+  },
+  {
+   "wall_s": 27.356,
+   "px4_boot_ms": 46348,
+   "event": "statustext",
+   "severity": 6,
+   "text": "RTL HOME activated\t"
+  },
+  {
+   "wall_s": 27.406,
+   "px4_boot_ms": 46396,
+   "event": "statustext",
+   "severity": 6,
+   "text": "RTL: landing at home position.\t"
+  },
+  {
+   "wall_s": 27.459,
+   "px4_boot_ms": 46444,
+   "event": "statustext",
+   "severity": 6,
+   "text": "RTL: climb to 39 m (7 m above destination)\t"
+  },
+  {
+   "wall_s": 27.508,
+   "px4_boot_ms": 46500,
+   "event": "statustext",
+   "severity": 6,
+   "text": "RTL: return at 39 m (7 m above destination)\t"
+  },
+  {
+   "wall_s": 27.561,
+   "px4_boot_ms": 46548,
+   "event": "statustext",
+   "severity": 6,
+   "text": "RTL: descend to 39 m (7 m above destination)\t"
+  },
+  {
+   "wall_s": 27.61,
+   "px4_boot_ms": 46596,
+   "event": "statustext",
+   "severity": 6,
+   "text": "RTL: land at destination\t"
+  },
+  {
+   "wall_s": 28.088,
+   "px4_boot_ms": 47068,
+   "event": "heartbeat_change",
+   "main_mode": 4,
+   "sub_mode": 5,
+   "armed": true
+  },
+  {
+   "wall_s": 41.254,
+   "px4_boot_ms": 59948,
+   "event": "statustext",
+   "severity": 6,
+   "text": "Landing detected\t"
+  },
+  {
+   "wall_s": 43.306,
+   "px4_boot_ms": 61960,
+   "event": "statustext",
+   "severity": 6,
+   "text": "Disarmed by landing\t"
+  },
+  {
+   "wall_s": 43.416,
+   "px4_boot_ms": 62068,
+   "event": "heartbeat_change",
+   "main_mode": 3,
+   "sub_mode": 0,
+   "armed": false
+  },
+  {
+   "wall_s": 51.499,
+   "px4_boot_ms": 69976,
+   "event": "observe_end",
+   "main_mode": 3,
+   "sub_mode": 0,
+   "armed": false
+  }
+ ]
+}

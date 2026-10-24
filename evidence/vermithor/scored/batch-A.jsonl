@@ -1,0 +1,10 @@
+{"attempt": "A-01", "utc": "2026-10-24T00:27:31.768946+00:00", "valid": true, "outcome": "DEPARTED_RTL", "invalid_reason": null, "valid_so_far": 1}
+{"attempt": "A-02", "utc": "2026-10-24T00:28:44.093484+00:00", "valid": true, "outcome": "DEPARTED_RTL", "invalid_reason": null, "valid_so_far": 2}
+{"attempt": "A-03", "utc": "2026-10-24T00:29:56.432360+00:00", "valid": true, "outcome": "DEPARTED_RTL", "invalid_reason": null, "valid_so_far": 3}
+{"attempt": "A-04", "utc": "2026-10-24T00:31:08.776567+00:00", "valid": true, "outcome": "DEPARTED_RTL", "invalid_reason": null, "valid_so_far": 4}
+{"attempt": "A-05", "utc": "2026-10-24T00:32:21.054979+00:00", "valid": true, "outcome": "DEPARTED_RTL", "invalid_reason": null, "valid_so_far": 5}
+{"attempt": "A-06", "utc": "2026-10-24T00:33:33.324506+00:00", "valid": true, "outcome": "DEPARTED_RTL", "invalid_reason": null, "valid_so_far": 6}
+{"attempt": "A-07", "utc": "2026-10-24T00:34:45.627086+00:00", "valid": true, "outcome": "DEPARTED_RTL", "invalid_reason": null, "valid_so_far": 7}
+{"attempt": "A-08", "utc": "2026-10-24T00:35:57.878214+00:00", "valid": true, "outcome": "DEPARTED_RTL", "invalid_reason": null, "valid_so_far": 8}
+{"attempt": "A-09", "utc": "2026-10-24T00:37:10.156773+00:00", "valid": true, "outcome": "DEPARTED_RTL", "invalid_reason": null, "valid_so_far": 9}
+{"attempt": "A-10", "utc": "2026-10-24T00:38:22.420997+00:00", "valid": true, "outcome": "DEPARTED_RTL", "invalid_reason": null, "valid_so_far": 10}

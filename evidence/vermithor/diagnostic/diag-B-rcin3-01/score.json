@@ -1,0 +1,31 @@
+{
+ "run": "diag-B-rcin3-01",
+ "valid": true,
+ "invalid_reason": null,
+ "outcome": "SUSTAINED_HOLD",
+ "build": "B",
+ "scenario_exit": 0,
+ "ulog": "2026-10-24_17_16_16.ulg",
+ "valid_mc_samples": 106,
+ "t_arm": 24.792,
+ "last_valid_mc": 40.8,
+ "t_loss": 41.1,
+ "loss_lag_s": 0.3,
+ "alt_at_loss_m": 6.91,
+ "mode_sequence": [
+  {
+   "t": 41.1,
+   "nav": "POSCTL",
+   "armed": true
+  },
+  {
+   "t": 41.112,
+   "nav": "AUTO_LOITER",
+   "armed": true
+  }
+ ],
+ "t_loss_to_hold_s": 0.012,
+ "hold_before_departure_s": null,
+ "window_end": 66.1,
+ "log_end": 70.016
+}

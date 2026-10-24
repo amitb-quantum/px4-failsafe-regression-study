@@ -1,0 +1,14 @@
+{
+ "run": "B-04",
+ "valid": false,
+ "invalid_reason": "V4 precondition: at loss nav=15 arm=2 (need POSCTL, armed)",
+ "outcome": null,
+ "build": "B",
+ "scenario_exit": 0,
+ "ulog": "2026-10-24_00_16_33.ulg",
+ "valid_mc_samples": 106,
+ "t_arm": 24.784,
+ "last_valid_mc": 40.8,
+ "t_loss": 41.02,
+ "loss_lag_s": 0.22
+}

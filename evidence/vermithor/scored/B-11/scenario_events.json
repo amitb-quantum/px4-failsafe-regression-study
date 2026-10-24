@@ -1,0 +1,125 @@
+{
+ "constants": {
+  "RATE_HZ": 20.0,
+  "PRE_STREAM_S": 3.0,
+  "CLIMB_S": 8.0,
+  "NEUTRAL_S": 6.0,
+  "OBSERVE_S": 30.0,
+  "Z_NEUTRAL": 500,
+  "Z_CLIMB": 850
+ },
+ "events": [
+  {
+   "wall_s": 0.502,
+   "px4_boot_ms": null,
+   "event": "heartbeat",
+   "sysid": 1
+  },
+  {
+   "wall_s": 0.502,
+   "px4_boot_ms": null,
+   "event": "mc_stream_start",
+   "z": 500
+  },
+  {
+   "wall_s": 1.522,
+   "px4_boot_ms": 21068,
+   "event": "heartbeat_change",
+   "main_mode": 3,
+   "sub_mode": 0,
+   "armed": false
+  },
+  {
+   "wall_s": 3.518,
+   "px4_boot_ms": 23020,
+   "event": "command_ack",
+   "command": 176,
+   "result": 0
+  },
+  {
+   "wall_s": 5.502,
+   "px4_boot_ms": 24964,
+   "event": "posctl_confirmed"
+  },
+  {
+   "wall_s": 5.517,
+   "px4_boot_ms": 24976,
+   "event": "command_ack",
+   "command": 400,
+   "result": 0
+  },
+  {
+   "wall_s": 5.517,
+   "px4_boot_ms": 24976,
+   "event": "statustext",
+   "severity": 6,
+   "text": "Armed by external command\t"
+  },
+  {
+   "wall_s": 5.611,
+   "px4_boot_ms": 25068,
+   "event": "heartbeat_change",
+   "main_mode": 3,
+   "sub_mode": 0,
+   "armed": true
+  },
+  {
+   "wall_s": 7.503,
+   "px4_boot_ms": 26920,
+   "event": "armed_confirmed",
+   "attempts": 1,
+   "main_mode": 3
+  },
+  {
+   "wall_s": 7.503,
+   "px4_boot_ms": 26920,
+   "event": "climb",
+   "z": 850,
+   "seconds": 8.0
+  },
+  {
+   "wall_s": 8.338,
+   "px4_boot_ms": 27736,
+   "event": "statustext",
+   "severity": 6,
+   "text": "Takeoff detected\t"
+  },
+  {
+   "wall_s": 15.503,
+   "px4_boot_ms": 34740,
+   "event": "neutral",
+   "z": 500,
+   "seconds": 6.0
+  },
+  {
+   "wall_s": 21.503,
+   "px4_boot_ms": 40604,
+   "event": "mc_stream_stop",
+   "main_mode": 3,
+   "armed": true
+  },
+  {
+   "wall_s": 22.203,
+   "px4_boot_ms": 41300,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Failsafe activated, entering Hold for 5 seconds\t"
+  },
+  {
+   "wall_s": 22.992,
+   "px4_boot_ms": 42068,
+   "event": "heartbeat_change",
+   "main_mode": 4,
+   "sub_mode": 3,
+   "armed": true
+  },
+  {
+   "wall_s": 51.503,
+   "px4_boot_ms": 69964,
+   "event": "observe_end",
+   "main_mode": 4,
+   "sub_mode": 3,
+   "armed": true
+  }
+ ]
+}

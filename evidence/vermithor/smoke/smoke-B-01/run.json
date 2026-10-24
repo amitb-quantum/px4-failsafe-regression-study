@@ -1,0 +1,64 @@
+{
+ "build": "B",
+ "kind": "smoke",
+ "label": "smoke-B-01",
+ "started_utc": "2026-10-24T00:06:01.134231+00:00",
+ "worktree": "/home/manager/px4-regression/build-B",
+ "git_head": "aa5b9ae638f1bf412102de8fabd06740c725abf1",
+ "binary_git_version": "aa5b9ae638f1bf412102de8fabd06740c725abf1",
+ "binary_sha256": "83e2029d2533aa15c4d3dff80333b369bf93c9f9141dfeba361f72cff8e1ea5b",
+ "scenario_sha256": "d997d7cfcb57d38296305bb2db06c8a2d949e3f8b1b1055e762c862d09cd2b81",
+ "params_sha256": "83688d3b7987005b37d0885f54f46b19b24905d44d07cae4f76e28f3146d10ff",
+ "run_once_sha256": "ae75cdc605520324c8f5dcc314af61bc4a0686178db1b87880ef482776c57891",
+ "params_applied": {
+  "NAV_RCL_ACT": {
+   "want": 1,
+   "readback": "1",
+   "ok": true
+  },
+  "COM_RC_IN_MODE": {
+   "want": 1,
+   "readback": "1",
+   "ok": true
+  },
+  "COM_RC_LOSS_T": {
+   "want": 0.5,
+   "readback": "0.5000",
+   "ok": true
+  },
+  "COM_FAIL_ACT_T": {
+   "want": 5.0,
+   "readback": "5.0000",
+   "ok": true
+  },
+  "COM_RCL_EXCEPT": {
+   "want": 0,
+   "readback": "0",
+   "ok": true
+  },
+  "NAV_DLL_ACT": {
+   "want": 0,
+   "readback": "0",
+   "ok": true
+  },
+  "COM_DL_LOSS_T": {
+   "want": 10,
+   "readback": "10",
+   "ok": true
+  },
+  "COM_DISARM_PRFLT": {
+   "want": 10.0,
+   "readback": "10.0000",
+   "ok": true
+  }
+ },
+ "shutdown": "clean",
+ "scenario_exit": 0,
+ "px4_exit": 0,
+ "new_ulogs": [
+  "/home/manager/px4-regression/build-B/build/px4_sitl_default/rootfs/log/2026-10-24/00_06_01.ulg"
+ ],
+ "ulog": "2026-10-24_00_06_01.ulg",
+ "ulog_sha256": "4ebfa0b54bd966292445d010264bd4382c3db29522818950481324190e890b66",
+ "finished_utc": "2026-10-24T00:07:09.264139+00:00"
+}

@@ -1,0 +1,16 @@
+VM-venue bundle for px4-failsafe-regression-study (public repo, amitb-quantum).
+Source venue: this VM (Ubuntu 24.04), SIH sihsim_quadx, serial MAVLink over socat PTY.
+IMPORTANT: px4-feasibility-experiment-prereg-2026-10-23.md here is the CANONICAL
+amended preregistration (includes the 2026-10-23 gate-interpretation amendment,
+the mechanism correction, the parameter-explicitness amendment, and the setup
+correction). It SUPERSEDES any earlier prereg copy on vermithor — replace it.
+
+Layout for the repo (suggested):
+  prereg/px4-feasibility-experiment-prereg-2026-10-23.md   <- this file
+  reports/vm-venue/PHASE0_REPORT.md                        <- reports/
+  reports/vm-venue/BATCH_REPORT.md                         <- reports/
+  reports/vm-venue/DISCRIMINATING_TEST_COM_RC_IN_MODE.md   <- reports/
+  harness/vm-venue/{smoke_run.py,analyze_ulog.py,batch_run.py,discriminating_run.py}
+  evidence/vm-venue/*.json                                 <- evidence/
+NOT included on purpose: raw ULogs (use the sha256 hashes in the reports),
+PX4 source trees, build trees, binaries, rootfs dirs.

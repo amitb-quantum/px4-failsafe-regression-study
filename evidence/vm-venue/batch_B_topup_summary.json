@@ -1,0 +1,86 @@
+{
+ "label": "B",
+ "build_dir": "/home/hatch/workspace/px4-experiment/PX4-Autopilot/build/px4_sitl_default",
+ "attempts": 2,
+ "valid_runs": 2,
+ "results": [
+  {
+   "attempt": 1,
+   "run_dir": "/home/hatch/workspace/px4-experiment/batch_B_topup/B_attempt01",
+   "driver_tail": [
+    "window of 35.0s elapsed; restoring RC",
+    "landed/disarmed: True",
+    "px4 exit: 0"
+   ],
+   "valid": true,
+   "rc_loss_s": 23.8,
+   "nav_sequence": [
+    [
+     -0.16,
+     "AUTO_LOITER"
+    ],
+    [
+     11.0,
+     "POSCTL"
+    ],
+    [
+     23.81,
+     "AUTO_LOITER"
+    ],
+    [
+     28.82,
+     "POSCTL"
+    ],
+    [
+     60.21,
+     "AUTO_PRECLAND"
+    ],
+    [
+     67.41,
+     "POSCTL"
+    ]
+   ],
+   "hold_phase": true,
+   "departed_rtl": false
+  },
+  {
+   "attempt": 2,
+   "run_dir": "/home/hatch/workspace/px4-experiment/batch_B_topup/B_attempt02",
+   "driver_tail": [
+    "window of 35.0s elapsed; restoring RC",
+    "landed/disarmed: True",
+    "px4 exit: 0"
+   ],
+   "valid": true,
+   "rc_loss_s": 23.74,
+   "nav_sequence": [
+    [
+     -0.14,
+     "AUTO_LOITER"
+    ],
+    [
+     11.02,
+     "POSCTL"
+    ],
+    [
+     23.75,
+     "AUTO_LOITER"
+    ],
+    [
+     28.75,
+     "POSCTL"
+    ],
+    [
+     60.41,
+     "AUTO_PRECLAND"
+    ],
+    [
+     68.16,
+     "POSCTL"
+    ]
+   ],
+   "hold_phase": true,
+   "departed_rtl": false
+  }
+ ]
+}

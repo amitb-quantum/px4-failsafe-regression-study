@@ -1,0 +1,378 @@
+{
+ "label": "B",
+ "build_dir": "/home/hatch/workspace/px4-experiment/PX4-Autopilot/build/px4_sitl_default",
+ "attempts": 10,
+ "valid_runs": 10,
+ "results": [
+  {
+   "attempt": 1,
+   "run_dir": "/home/hatch/workspace/px4-experiment/batch_B/B_attempt01",
+   "driver_tail": [
+    "window of 35.0s elapsed; restoring RC",
+    "landed/disarmed: False",
+    "px4 exit: 0"
+   ],
+   "valid": true,
+   "rc_loss_s": 23.68,
+   "nav_sequence": [
+    [
+     -0.14,
+     "AUTO_LOITER"
+    ],
+    [
+     11.02,
+     "POSCTL"
+    ],
+    [
+     18.71,
+     "ALTCTL"
+    ],
+    [
+     23.69,
+     "TERMINATION"
+    ]
+   ],
+   "hold_phase": false,
+   "departed_rtl": false
+  },
+  {
+   "attempt": 2,
+   "run_dir": "/home/hatch/workspace/px4-experiment/batch_B/B_attempt02",
+   "driver_tail": [
+    "window of 35.0s elapsed; restoring RC",
+    "landed/disarmed: True",
+    "px4 exit: 0"
+   ],
+   "valid": true,
+   "rc_loss_s": 23.81,
+   "nav_sequence": [
+    [
+     -0.14,
+     "AUTO_LOITER"
+    ],
+    [
+     11.02,
+     "POSCTL"
+    ],
+    [
+     23.82,
+     "AUTO_LOITER"
+    ],
+    [
+     28.83,
+     "POSCTL"
+    ],
+    [
+     60.41,
+     "AUTO_PRECLAND"
+    ],
+    [
+     67.4,
+     "POSCTL"
+    ]
+   ],
+   "hold_phase": true,
+   "departed_rtl": false
+  },
+  {
+   "attempt": 3,
+   "run_dir": "/home/hatch/workspace/px4-experiment/batch_B/B_attempt03",
+   "driver_tail": [
+    "window of 35.0s elapsed; restoring RC",
+    "landed/disarmed: True",
+    "px4 exit: 0"
+   ],
+   "valid": true,
+   "rc_loss_s": 23.78,
+   "nav_sequence": [
+    [
+     -0.15,
+     "AUTO_LOITER"
+    ],
+    [
+     11.01,
+     "POSCTL"
+    ],
+    [
+     23.79,
+     "AUTO_LOITER"
+    ],
+    [
+     28.8,
+     "POSCTL"
+    ],
+    [
+     60.11,
+     "AUTO_PRECLAND"
+    ],
+    [
+     68.41,
+     "POSCTL"
+    ]
+   ],
+   "hold_phase": true,
+   "departed_rtl": false
+  },
+  {
+   "attempt": 4,
+   "run_dir": "/home/hatch/workspace/px4-experiment/batch_B/B_attempt04",
+   "driver_tail": [
+    "window of 35.0s elapsed; restoring RC",
+    "landed/disarmed: True",
+    "px4 exit: 0"
+   ],
+   "valid": true,
+   "rc_loss_s": 23.85,
+   "nav_sequence": [
+    [
+     -0.14,
+     "AUTO_LOITER"
+    ],
+    [
+     11.02,
+     "POSCTL"
+    ],
+    [
+     23.86,
+     "AUTO_LOITER"
+    ],
+    [
+     28.86,
+     "POSCTL"
+    ],
+    [
+     60.47,
+     "AUTO_PRECLAND"
+    ],
+    [
+     66.71,
+     "POSCTL"
+    ]
+   ],
+   "hold_phase": true,
+   "departed_rtl": false
+  },
+  {
+   "attempt": 5,
+   "run_dir": "/home/hatch/workspace/px4-experiment/batch_B/B_attempt05",
+   "driver_tail": [
+    "window of 35.0s elapsed; restoring RC",
+    "landed/disarmed: True",
+    "px4 exit: 0"
+   ],
+   "valid": true,
+   "rc_loss_s": 23.9,
+   "nav_sequence": [
+    [
+     -0.15,
+     "AUTO_LOITER"
+    ],
+    [
+     11.01,
+     "POSCTL"
+    ],
+    [
+     23.91,
+     "AUTO_LOITER"
+    ],
+    [
+     28.92,
+     "POSCTL"
+    ],
+    [
+     60.5,
+     "AUTO_PRECLAND"
+    ],
+    [
+     67.11,
+     "POSCTL"
+    ]
+   ],
+   "hold_phase": true,
+   "departed_rtl": false
+  },
+  {
+   "attempt": 6,
+   "run_dir": "/home/hatch/workspace/px4-experiment/batch_B/B_attempt06",
+   "driver_tail": [
+    "window of 35.0s elapsed; restoring RC",
+    "landed/disarmed: True",
+    "px4 exit: 0"
+   ],
+   "valid": true,
+   "rc_loss_s": 23.86,
+   "nav_sequence": [
+    [
+     -0.13,
+     "AUTO_LOITER"
+    ],
+    [
+     11.03,
+     "POSCTL"
+    ],
+    [
+     23.87,
+     "AUTO_LOITER"
+    ],
+    [
+     28.87,
+     "POSCTL"
+    ],
+    [
+     60.53,
+     "AUTO_PRECLAND"
+    ],
+    [
+     67.76,
+     "POSCTL"
+    ]
+   ],
+   "hold_phase": true,
+   "departed_rtl": false
+  },
+  {
+   "attempt": 7,
+   "run_dir": "/home/hatch/workspace/px4-experiment/batch_B/B_attempt07",
+   "driver_tail": [
+    "window of 35.0s elapsed; restoring RC",
+    "landed/disarmed: True",
+    "px4 exit: 0"
+   ],
+   "valid": true,
+   "rc_loss_s": 23.89,
+   "nav_sequence": [
+    [
+     -0.15,
+     "AUTO_LOITER"
+    ],
+    [
+     11.01,
+     "POSCTL"
+    ],
+    [
+     23.9,
+     "AUTO_LOITER"
+    ],
+    [
+     28.9,
+     "POSCTL"
+    ],
+    [
+     60.55,
+     "AUTO_PRECLAND"
+    ]
+   ],
+   "hold_phase": true,
+   "departed_rtl": false
+  },
+  {
+   "attempt": 8,
+   "run_dir": "/home/hatch/workspace/px4-experiment/batch_B/B_attempt08",
+   "driver_tail": [
+    "window of 35.0s elapsed; restoring RC",
+    "landed/disarmed: False",
+    "px4 exit: 0"
+   ],
+   "valid": true,
+   "rc_loss_s": 23.87,
+   "nav_sequence": [
+    [
+     -0.14,
+     "AUTO_LOITER"
+    ],
+    [
+     11.02,
+     "POSCTL"
+    ],
+    [
+     18.9,
+     "ALTCTL"
+    ],
+    [
+     23.88,
+     "TERMINATION"
+    ]
+   ],
+   "hold_phase": false,
+   "departed_rtl": false
+  },
+  {
+   "attempt": 9,
+   "run_dir": "/home/hatch/workspace/px4-experiment/batch_B/B_attempt09",
+   "driver_tail": [
+    "window of 35.0s elapsed; restoring RC",
+    "landed/disarmed: True",
+    "px4 exit: 0"
+   ],
+   "valid": true,
+   "rc_loss_s": 23.91,
+   "nav_sequence": [
+    [
+     -0.14,
+     "AUTO_LOITER"
+    ],
+    [
+     11.02,
+     "POSCTL"
+    ],
+    [
+     23.92,
+     "AUTO_LOITER"
+    ],
+    [
+     28.92,
+     "POSCTL"
+    ],
+    [
+     60.55,
+     "AUTO_PRECLAND"
+    ],
+    [
+     67.17,
+     "POSCTL"
+    ]
+   ],
+   "hold_phase": true,
+   "departed_rtl": false
+  },
+  {
+   "attempt": 10,
+   "run_dir": "/home/hatch/workspace/px4-experiment/batch_B/B_attempt10",
+   "driver_tail": [
+    "window of 35.0s elapsed; restoring RC",
+    "landed/disarmed: True",
+    "px4 exit: 0"
+   ],
+   "valid": true,
+   "rc_loss_s": 23.88,
+   "nav_sequence": [
+    [
+     -0.13,
+     "AUTO_LOITER"
+    ],
+    [
+     11.03,
+     "POSCTL"
+    ],
+    [
+     23.89,
+     "AUTO_LOITER"
+    ],
+    [
+     28.9,
+     "POSCTL"
+    ],
+    [
+     60.55,
+     "AUTO_PRECLAND"
+    ],
+    [
+     68.72,
+     "POSCTL"
+    ]
+   ],
+   "hold_phase": true,
+   "departed_rtl": false
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+log duration: 62.5s
+
+vehicle_status timeline (changes only):
+  t=  -0.13s  nav_state= 4 (AUTO_LOITER)  arming_state=1  failsafe=0
+  t=  20.04s  nav_state= 2 (POSCTL)  arming_state=1  failsafe=0
+  t=  24.79s  nav_state= 2 (POSCTL)  arming_state=2  failsafe=0
+  t=  41.11s  nav_state= 4 (AUTO_LOITER)  arming_state=2  failsafe=1
+  t=  46.12s  nav_state= 5 (AUTO_RTL)  arming_state=2  failsafe=1
+  t=  61.48s  nav_state= 2 (POSCTL)  arming_state=1  failsafe=0
+
+manual_control_setpoint: 108 logged samples; valid MAVLink (valid=1, data_source=2): 106
+  valid values seen: [0, 1]; data_source values seen: [0, 2]  (2=MAVLink instance 0)
+  first valid t=20.03s, last valid t=40.80s
+
+failsafe_flags.manual_control_signal_lost transitions: t=-0.05s->1, t=20.04s->0, t=41.10s->1
+  RC loss after stream: set at t=41.10s (0.30s after last valid sample)
+  other failsafe flags rising after arming (t=24.79s): none
+
+ground-truth altitude: 6.93 m at last valid sample; after it min -0.00 m, max 6.96 m, at log end -0.00 m

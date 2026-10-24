@@ -1,0 +1,15 @@
+log duration: 66.0s
+
+vehicle_status timeline (changes only):
+  t=    0.0s  nav_state= 4 (AUTO_LOITER)  arming_state=1
+  t=   20.2s  nav_state= 2 (POSCTL)  arming_state=1
+  t=   24.9s  nav_state= 2 (POSCTL)  arming_state=2
+  t=   37.2s  nav_state= 4 (AUTO_LOITER)  arming_state=2
+
+manual_control_setpoint: 89 samples, first t=18446744073709.5s, last t=37.0s
+  valid values seen: [0, 1]
+  data_source values seen: [0, 2]  (0=unknown, 1=RC, 2=MAVLink, 3=MAVLink via GCS?)
+
+failsafe_flags.manual_control_signal_lost: FIRST SET at t=0.1s
+/home/manager/px4-regression/harness/ulog_check.py:42: RuntimeWarning: overflow encountered in scalar subtract
+  rel = lambda t: (t - t0) / 1e6  # noqa: E731

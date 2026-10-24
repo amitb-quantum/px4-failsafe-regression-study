@@ -1,0 +1,50 @@
+# Flight logs: never committed (hashes are in evidence/*/ulog-sha256.txt and the reports)
+*.ulg
+*.ulog
+
+# PX4 source trees, worktrees, build trees, simulator rootfs
+PX4-Autopilot/
+build-A/
+build-B/
+build/
+rootfs/
+**/rootfs/
+**/px4_sitl_default/
+**/px4_sitl_test/
+sitl_build_A/
+
+# Binaries and build outputs
+*.elf
+*.bin
+*.px4
+*.o
+*.a
+*.so
+bin/
+**/bin/px4*
+
+# Run directories and console transcripts (raw, large, machine-specific)
+runs/
+px4_console.log
+*.console.log
+
+# Archives and Windows download metadata
+*.zip
+*.tar
+*.tar.gz
+*:Zone.Identifier
+
+# Python / environment
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+*.env
+
+# Credentials (defensive)
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+.netrc

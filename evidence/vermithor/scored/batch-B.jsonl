@@ -1,0 +1,11 @@
+{"attempt": "B-01", "utc": "2026-10-24T00:14:08.620670+00:00", "valid": true, "outcome": "SUSTAINED_HOLD", "invalid_reason": null, "valid_so_far": 1}
+{"attempt": "B-02", "utc": "2026-10-24T00:15:20.946463+00:00", "valid": true, "outcome": "SUSTAINED_HOLD", "invalid_reason": null, "valid_so_far": 2}
+{"attempt": "B-03", "utc": "2026-10-24T00:16:33.317353+00:00", "valid": true, "outcome": "SUSTAINED_HOLD", "invalid_reason": null, "valid_so_far": 3}
+{"attempt": "B-04", "utc": "2026-10-24T00:17:45.589840+00:00", "valid": false, "outcome": null, "invalid_reason": "V4 precondition: at loss nav=15 arm=2 (need POSCTL, armed)", "valid_so_far": 3}
+{"attempt": "B-05", "utc": "2026-10-24T00:18:57.888565+00:00", "valid": true, "outcome": "SUSTAINED_HOLD", "invalid_reason": null, "valid_so_far": 4}
+{"attempt": "B-06", "utc": "2026-10-24T00:20:10.209644+00:00", "valid": true, "outcome": "SUSTAINED_HOLD", "invalid_reason": null, "valid_so_far": 5}
+{"attempt": "B-07", "utc": "2026-10-24T00:21:22.565863+00:00", "valid": true, "outcome": "SUSTAINED_HOLD", "invalid_reason": null, "valid_so_far": 6}
+{"attempt": "B-08", "utc": "2026-10-24T00:22:34.837748+00:00", "valid": true, "outcome": "SUSTAINED_HOLD", "invalid_reason": null, "valid_so_far": 7}
+{"attempt": "B-09", "utc": "2026-10-24T00:23:47.132241+00:00", "valid": true, "outcome": "SUSTAINED_HOLD", "invalid_reason": null, "valid_so_far": 8}
+{"attempt": "B-10", "utc": "2026-10-24T00:24:59.462370+00:00", "valid": true, "outcome": "SUSTAINED_HOLD", "invalid_reason": null, "valid_so_far": 9}
+{"attempt": "B-11", "utc": "2026-10-24T00:26:11.807942+00:00", "valid": true, "outcome": "SUSTAINED_HOLD", "invalid_reason": null, "valid_so_far": 10}

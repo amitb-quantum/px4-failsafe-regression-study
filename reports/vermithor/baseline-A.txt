@@ -1,0 +1,7 @@
+Test project /home/manager/build-A/build/px4_sitl_test
+    Start 59: functional-failsafe_test
+1/1 Test #59: functional-failsafe_test .........   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.01 sec

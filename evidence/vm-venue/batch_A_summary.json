@@ -1,0 +1,358 @@
+{
+ "label": "A",
+ "build_dir": "/home/hatch/workspace/px4-experiment/sitl_build_A",
+ "attempts": 10,
+ "valid_runs": 10,
+ "results": [
+  {
+   "attempt": 1,
+   "run_dir": "/home/hatch/workspace/px4-experiment/batch_A/A_attempt01",
+   "driver_tail": [
+    "window of 35.0s elapsed; restoring RC",
+    "landed/disarmed: True",
+    "px4 exit: 0"
+   ],
+   "valid": true,
+   "rc_loss_s": 23.59,
+   "nav_sequence": [
+    [
+     -0.13,
+     "AUTO_LOITER"
+    ],
+    [
+     10.82,
+     "POSCTL"
+    ],
+    [
+     23.6,
+     "AUTO_LOITER"
+    ],
+    [
+     28.61,
+     "AUTO_RTL"
+    ],
+    [
+     36.28,
+     "POSCTL"
+    ]
+   ],
+   "hold_phase": true,
+   "departed_rtl": true
+  },
+  {
+   "attempt": 2,
+   "run_dir": "/home/hatch/workspace/px4-experiment/batch_A/A_attempt02",
+   "driver_tail": [
+    "window of 35.0s elapsed; restoring RC",
+    "landed/disarmed: True",
+    "px4 exit: 0"
+   ],
+   "valid": true,
+   "rc_loss_s": 23.72,
+   "nav_sequence": [
+    [
+     -0.14,
+     "AUTO_LOITER"
+    ],
+    [
+     11.02,
+     "POSCTL"
+    ],
+    [
+     23.74,
+     "AUTO_LOITER"
+    ],
+    [
+     28.74,
+     "AUTO_RTL"
+    ],
+    [
+     36.71,
+     "POSCTL"
+    ]
+   ],
+   "hold_phase": true,
+   "departed_rtl": true
+  },
+  {
+   "attempt": 3,
+   "run_dir": "/home/hatch/workspace/px4-experiment/batch_A/A_attempt03",
+   "driver_tail": [
+    "window of 35.0s elapsed; restoring RC",
+    "landed/disarmed: False",
+    "px4 exit: 0"
+   ],
+   "valid": true,
+   "rc_loss_s": 23.86,
+   "nav_sequence": [
+    [
+     -0.14,
+     "AUTO_LOITER"
+    ],
+    [
+     11.02,
+     "POSCTL"
+    ],
+    [
+     18.78,
+     "ALTCTL"
+    ],
+    [
+     23.76,
+     "TERMINATION"
+    ],
+    [
+     23.88,
+     "AUTO_LAND"
+    ]
+   ],
+   "hold_phase": false,
+   "departed_rtl": true
+  },
+  {
+   "attempt": 4,
+   "run_dir": "/home/hatch/workspace/px4-experiment/batch_A/A_attempt04",
+   "driver_tail": [
+    "window of 35.0s elapsed; restoring RC",
+    "landed/disarmed: False",
+    "px4 exit: 0"
+   ],
+   "valid": true,
+   "rc_loss_s": 23.8,
+   "nav_sequence": [
+    [
+     -0.14,
+     "AUTO_LOITER"
+    ],
+    [
+     11.02,
+     "POSCTL"
+    ],
+    [
+     18.84,
+     "ALTCTL"
+    ],
+    [
+     23.81,
+     "AUTO_TAKEOFF"
+    ],
+    [
+     23.82,
+     "AUTO_LAND"
+    ]
+   ],
+   "hold_phase": false,
+   "departed_rtl": true
+  },
+  {
+   "attempt": 5,
+   "run_dir": "/home/hatch/workspace/px4-experiment/batch_A/A_attempt05",
+   "driver_tail": [
+    "window of 35.0s elapsed; restoring RC",
+    "landed/disarmed: True",
+    "px4 exit: 0"
+   ],
+   "valid": true,
+   "rc_loss_s": 23.88,
+   "nav_sequence": [
+    [
+     -0.13,
+     "AUTO_LOITER"
+    ],
+    [
+     11.03,
+     "POSCTL"
+    ],
+    [
+     23.89,
+     "AUTO_LOITER"
+    ],
+    [
+     28.9,
+     "AUTO_RTL"
+    ],
+    [
+     37.38,
+     "POSCTL"
+    ]
+   ],
+   "hold_phase": true,
+   "departed_rtl": true
+  },
+  {
+   "attempt": 6,
+   "run_dir": "/home/hatch/workspace/px4-experiment/batch_A/A_attempt06",
+   "driver_tail": [
+    "window of 35.0s elapsed; restoring RC",
+    "landed/disarmed: True",
+    "px4 exit: 0"
+   ],
+   "valid": true,
+   "rc_loss_s": 23.89,
+   "nav_sequence": [
+    [
+     -0.13,
+     "AUTO_LOITER"
+    ],
+    [
+     11.03,
+     "POSCTL"
+    ],
+    [
+     23.9,
+     "AUTO_LOITER"
+    ],
+    [
+     28.91,
+     "AUTO_RTL"
+    ],
+    [
+     36.73,
+     "POSCTL"
+    ]
+   ],
+   "hold_phase": true,
+   "departed_rtl": true
+  },
+  {
+   "attempt": 7,
+   "run_dir": "/home/hatch/workspace/px4-experiment/batch_A/A_attempt07",
+   "driver_tail": [
+    "window of 35.0s elapsed; restoring RC",
+    "landed/disarmed: True",
+    "px4 exit: 0"
+   ],
+   "valid": true,
+   "rc_loss_s": 23.72,
+   "nav_sequence": [
+    [
+     -0.14,
+     "AUTO_LOITER"
+    ],
+    [
+     11.02,
+     "POSCTL"
+    ],
+    [
+     23.74,
+     "AUTO_LOITER"
+    ],
+    [
+     28.74,
+     "AUTO_RTL"
+    ],
+    [
+     37.25,
+     "POSCTL"
+    ]
+   ],
+   "hold_phase": true,
+   "departed_rtl": true
+  },
+  {
+   "attempt": 8,
+   "run_dir": "/home/hatch/workspace/px4-experiment/batch_A/A_attempt08",
+   "driver_tail": [
+    "window of 35.0s elapsed; restoring RC",
+    "landed/disarmed: True",
+    "px4 exit: 0"
+   ],
+   "valid": true,
+   "rc_loss_s": 23.84,
+   "nav_sequence": [
+    [
+     -0.15,
+     "AUTO_LOITER"
+    ],
+    [
+     11.0,
+     "POSCTL"
+    ],
+    [
+     23.85,
+     "AUTO_LOITER"
+    ],
+    [
+     28.86,
+     "AUTO_RTL"
+    ],
+    [
+     37.32,
+     "POSCTL"
+    ]
+   ],
+   "hold_phase": true,
+   "departed_rtl": true
+  },
+  {
+   "attempt": 9,
+   "run_dir": "/home/hatch/workspace/px4-experiment/batch_A/A_attempt09",
+   "driver_tail": [
+    "window of 35.0s elapsed; restoring RC",
+    "landed/disarmed: True",
+    "px4 exit: 0"
+   ],
+   "valid": true,
+   "rc_loss_s": 23.75,
+   "nav_sequence": [
+    [
+     -0.14,
+     "AUTO_LOITER"
+    ],
+    [
+     11.02,
+     "POSCTL"
+    ],
+    [
+     23.76,
+     "AUTO_LOITER"
+    ],
+    [
+     28.77,
+     "AUTO_RTL"
+    ],
+    [
+     36.05,
+     "POSCTL"
+    ]
+   ],
+   "hold_phase": true,
+   "departed_rtl": true
+  },
+  {
+   "attempt": 10,
+   "run_dir": "/home/hatch/workspace/px4-experiment/batch_A/A_attempt10",
+   "driver_tail": [
+    "window of 35.0s elapsed; restoring RC",
+    "landed/disarmed: True",
+    "px4 exit: 0"
+   ],
+   "valid": true,
+   "rc_loss_s": 23.79,
+   "nav_sequence": [
+    [
+     -0.14,
+     "AUTO_LOITER"
+    ],
+    [
+     10.82,
+     "POSCTL"
+    ],
+    [
+     23.8,
+     "AUTO_LOITER"
+    ],
+    [
+     28.81,
+     "AUTO_RTL"
+    ],
+    [
+     36.6,
+     "POSCTL"
+    ]
+   ],
+   "hold_phase": true,
+   "departed_rtl": true
+  }
+ ]
+}

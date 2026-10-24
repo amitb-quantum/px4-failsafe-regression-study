@@ -1,0 +1,281 @@
+{
+ "constants": {
+  "RATE_HZ": 20.0,
+  "PRE_STREAM_S": 3.0,
+  "CLIMB_S": 8.0,
+  "NEUTRAL_S": 6.0,
+  "OBSERVE_S": 30.0,
+  "Z_NEUTRAL": 500,
+  "Z_CLIMB": 850
+ },
+ "events": [
+  {
+   "wall_s": 0.504,
+   "px4_boot_ms": null,
+   "event": "heartbeat",
+   "sysid": 1
+  },
+  {
+   "wall_s": 0.505,
+   "px4_boot_ms": null,
+   "event": "mc_stream_start",
+   "z": 500
+  },
+  {
+   "wall_s": 1.527,
+   "px4_boot_ms": 21060,
+   "event": "heartbeat_change",
+   "main_mode": 3,
+   "sub_mode": 0,
+   "armed": false
+  },
+  {
+   "wall_s": 3.514,
+   "px4_boot_ms": 23004,
+   "event": "command_ack",
+   "command": 176,
+   "result": 0
+  },
+  {
+   "wall_s": 5.505,
+   "px4_boot_ms": 24956,
+   "event": "posctl_confirmed"
+  },
+  {
+   "wall_s": 5.514,
+   "px4_boot_ms": 24964,
+   "event": "command_ack",
+   "command": 400,
+   "result": 0
+  },
+  {
+   "wall_s": 5.514,
+   "px4_boot_ms": 24964,
+   "event": "statustext",
+   "severity": 6,
+   "text": "Armed by external command\t"
+  },
+  {
+   "wall_s": 5.616,
+   "px4_boot_ms": 25060,
+   "event": "heartbeat_change",
+   "main_mode": 3,
+   "sub_mode": 0,
+   "armed": true
+  },
+  {
+   "wall_s": 6.626,
+   "px4_boot_ms": 26044,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Preflight Fail: No valid data from Baro 0"
+  },
+  {
+   "wall_s": 6.679,
+   "px4_boot_ms": 26100,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Preflight Fail: No valid data from Compass 0"
+  },
+  {
+   "wall_s": 7.506,
+   "px4_boot_ms": 26916,
+   "event": "armed_confirmed",
+   "attempts": 1,
+   "main_mode": 3
+  },
+  {
+   "wall_s": 7.506,
+   "px4_boot_ms": 26916,
+   "event": "climb",
+   "z": 850,
+   "seconds": 8.0
+  },
+  {
+   "wall_s": 8.35,
+   "px4_boot_ms": 27736,
+   "event": "statustext",
+   "severity": 6,
+   "text": "Takeoff detected\t"
+  },
+  {
+   "wall_s": 10.608,
+   "px4_boot_ms": 29940,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Preflight Fail: No valid data from Baro 0"
+  },
+  {
+   "wall_s": 10.662,
+   "px4_boot_ms": 29996,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Preflight Fail: No valid data from Compass 0"
+  },
+  {
+   "wall_s": 10.711,
+   "px4_boot_ms": 30044,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Failsafe activated\t"
+  },
+  {
+   "wall_s": 10.731,
+   "px4_boot_ms": 30060,
+   "event": "heartbeat_change",
+   "main_mode": 2,
+   "sub_mode": 0,
+   "armed": true
+  },
+  {
+   "wall_s": 10.764,
+   "px4_boot_ms": 30096,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Failsafe activated\t"
+  },
+  {
+   "wall_s": 12.719,
+   "px4_boot_ms": 32004,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Preflight Fail: No valid data from Baro 0"
+  },
+  {
+   "wall_s": 12.772,
+   "px4_boot_ms": 32060,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Preflight Fail: No valid data from Compass 0"
+  },
+  {
+   "wall_s": 12.821,
+   "px4_boot_ms": 32100,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Preflight Fail: Battery unhealthy"
+  },
+  {
+   "wall_s": 15.506,
+   "px4_boot_ms": 34736,
+   "event": "neutral",
+   "z": 500,
+   "seconds": 6.0
+  },
+  {
+   "wall_s": 15.701,
+   "px4_boot_ms": 34924,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Preflight Fail: No valid data from Baro 0"
+  },
+  {
+   "wall_s": 15.754,
+   "px4_boot_ms": 34976,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Preflight Fail: No valid data from Compass 0"
+  },
+  {
+   "wall_s": 15.803,
+   "px4_boot_ms": 35020,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Preflight Fail: Battery unhealthy"
+  },
+  {
+   "wall_s": 15.844,
+   "px4_boot_ms": 35060,
+   "event": "heartbeat_change",
+   "main_mode": 7,
+   "sub_mode": 0,
+   "armed": true
+  },
+  {
+   "wall_s": 15.856,
+   "px4_boot_ms": 35080,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Failsafe activated\t"
+  },
+  {
+   "wall_s": 21.506,
+   "px4_boot_ms": 40604,
+   "event": "mc_stream_stop",
+   "main_mode": 7,
+   "armed": true
+  },
+  {
+   "wall_s": 22.118,
+   "px4_boot_ms": 41196,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Preflight Fail: No valid data from Baro 0"
+  },
+  {
+   "wall_s": 22.171,
+   "px4_boot_ms": 41244,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Preflight Fail: No valid data from Compass 0"
+  },
+  {
+   "wall_s": 22.22,
+   "px4_boot_ms": 41296,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Preflight Fail: Battery unhealthy"
+  },
+  {
+   "wall_s": 22.274,
+   "px4_boot_ms": 41340,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Failsafe activated\t"
+  },
+  {
+   "wall_s": 23.001,
+   "px4_boot_ms": 42060,
+   "event": "heartbeat_change",
+   "main_mode": 1,
+   "sub_mode": 0,
+   "armed": true
+  },
+  {
+   "wall_s": 24.228,
+   "px4_boot_ms": 43260,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Preflight Fail: No valid data from Baro 0"
+  },
+  {
+   "wall_s": 24.281,
+   "px4_boot_ms": 43316,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Preflight Fail: No valid data from Compass 0"
+  },
+  {
+   "wall_s": 24.33,
+   "px4_boot_ms": 43364,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Preflight Fail: Flight termination active"
+  },
+  {
+   "wall_s": 24.384,
+   "px4_boot_ms": 43416,
+   "event": "statustext",
+   "severity": 2,
+   "text": "Preflight Fail: Battery unhealthy"
+  },
+  {
+   "wall_s": 51.506,
+   "px4_boot_ms": 69940,
+   "event": "observe_end",
+   "main_mode": 1,
+   "sub_mode": 0,
+   "armed": true
+  }
+ ]
+}

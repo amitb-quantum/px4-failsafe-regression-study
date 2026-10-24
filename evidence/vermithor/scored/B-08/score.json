@@ -1,0 +1,31 @@
+{
+ "run": "B-08",
+ "valid": true,
+ "invalid_reason": null,
+ "outcome": "SUSTAINED_HOLD",
+ "build": "B",
+ "scenario_exit": 0,
+ "ulog": "2026-10-24_00_21_22.ulg",
+ "valid_mc_samples": 106,
+ "t_arm": 24.784,
+ "last_valid_mc": 40.808,
+ "t_loss": 41.104,
+ "loss_lag_s": 0.296,
+ "alt_at_loss_m": 6.86,
+ "mode_sequence": [
+  {
+   "t": 41.104,
+   "nav": "POSCTL",
+   "armed": true
+  },
+  {
+   "t": 41.116,
+   "nav": "AUTO_LOITER",
+   "armed": true
+  }
+ ],
+ "t_loss_to_hold_s": 0.012,
+ "hold_before_departure_s": null,
+ "window_end": 66.104,
+ "log_end": 69.98
+}
