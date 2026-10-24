@@ -1,5 +1,54 @@
 # px4-failsafe-regression-study
 
+## In plain language
+
+**What PX4 is.** [PX4](https://px4.io) is open-source autopilot software: the program running on
+a drone's flight computer that keeps it stable, flies it where it is told, and decides what to do
+when something goes wrong. It is used by hobbyists, universities and companies, and anyone can
+change it. Because it changes all the time, a fix in one place can quietly break behavior somewhere
+else.
+
+**The bug we used.** In early 2023, PX4 had a safety bug. A pilot could tell the drone: "if you
+lose my radio signal, **stop and hover in place**" (called *Hold*). Instead, if the signal dropped
+while the drone was being flown by hand in its normal position-holding mode, it hovered for 5
+seconds and then **flew back to its launch point** on its own. The PX4 developers found and fixed it
+in one line ([PR #21403](https://github.com/PX4/PX4-Autopilot/pull/21403)). That gives two
+versions of PX4 that differ only by that line: one with the bug (Build A), one with the fix
+(Build B).
+
+**What we did.**
+1. We wrote down in advance exactly what we would test, how we would score it, and what counts as
+   success or failure: a *preregistration*, so the rules could not be bent after seeing results.
+2. We checked whether PX4's own automated test notices the bug. It does not: the test passes on
+   both versions, because it skips the exact piece of code where the bug lives.
+3. We built both versions and flew them in PX4's built-in flight simulator, over and over. Each
+   flight took off, hovered, and then had its "radio" cut. Everything else stayed connected.
+4. A small program (the *harness*) ran each flight automatically, read the drone's own flight log
+   afterward, and decided from the log alone whether the drone kept hovering or flew home.
+5. We did this on two different computers, independently, to see whether the result held up.
+
+**What we achieved.**
+- **The harness told the two versions apart every time.** In 10 out of 10 valid flights, the fixed
+  version kept hovering, and in 10 out of 10 the buggy version flew home exactly 5 seconds after
+  the signal loss. This happened on both computers.
+- **It caught something PX4's own test cannot.** It did so without being thrown off by the
+  simulator's natural run-to-run noise.
+- **Every claim can be traced to evidence:** exact versions, settings, scripts and flight-log
+  fingerprints, so an engineer can reproduce it.
+
+**What we did not show.**
+- This is **one bug, in simulation only**.
+- Ten flights per version is a sanity check, not a reliability rate.
+- Nothing here says whether anyone would pay for such a tool.
+- One puzzle is **unresolved**. After the 5-second pause, the fixed version behaves slightly
+  differently on the two computers. On one it keeps hovering; on the other it hands control back
+  to position mode. On both, it correctly avoids flying home. Three follow-up checks have not
+  explained why (see [Open question](#open-question-the-cross-venue-build-b-difference)).
+
+The rest of this README is the technical version.
+
+---
+
 A **closed, preregistered feasibility study** testing one narrow question: given two PX4 builds,
 can an automated harness detect a meaningful change in tested behavior, beyond what PX4's own
 tests report and without being fooled by simulation noise, and produce enough evidence for an
@@ -24,7 +73,7 @@ It was tested on **one historical PX4 regression**: the RC-loss "Hold" failsafe 
   meaningful difference was flagged on each.
 - **The cross-venue difference in Build B is still open.** After the 5 s failsafe-action delay,
   **VM Build B clears the failsafe and returns to POSCTL**, while **vermithor Build B sustains
-  Hold** with the failsafe never clearing. Neither venue's diagnostic explains this (see
+  Hold** with the failsafe never clearing. None of the three follow-up diagnostics explains this (see
   [Open question](#open-question-the-cross-venue-build-b-difference)).
 - **Raw flight logs (ULogs) are not in this repository** (~300 MB). Every log is identified by
   its sha256 so a reader holding the files can match them exactly.
@@ -152,6 +201,7 @@ shorthand; see the amendment in [`prereg/`](prereg/px4-feasibility-experiment-pr
 | Vermithor: parameter sets, telemetry after the stop, harness actions at the window boundary | Parameters identical across all 21 scored runs (779 compared). GCS heartbeat present on every sample in the window. No harness command after RC loss, no user takeover. **Nothing on vermithor could produce a POSCTL return.** | [`comparison-report.md`](reports/vermithor/comparison-report.md) (reconciliation sections) |
 | VM: Build B with `COM_RC_IN_MODE=1` (vermithor's value) | **Neither confirmed nor refuted.** On the VM's serial-PTY transport, mode 1 let the manual-control stream validate for ~0.2 s, then dropped it; arming was denied in 2/2 attempts; RC loss was never reached. | [`DISCRIMINATING_TEST_COM_RC_IN_MODE.md`](reports/vm-venue/DISCRIMINATING_TEST_COM_RC_IN_MODE.md) |
 | Vermithor: Build B with `COM_RC_IN_MODE=3` (the VM's value) | **Refuted** (prediction fixed before the run). The run was valid; the failsafe stayed set and Hold was sustained, exactly as in the batch. The parameter does not explain the difference. | [`experiment-writeup.md`](reports/vermithor/experiment-writeup.md), "Post-experiment diagnostics" |
+| VM: Build B with a 1 Hz GCS heartbeat added (vermithor sends one; the VM batch did not) | **Inconclusive** under its pre-fixed rule. Step 1 required `telemetry_status.heartbeat_type_gcs` in the log, and it never appeared. The flight repeated the batch pattern (POSCTL at +5.01 s). **Review note:** PX4 source shows the logger records only 4 `telemetry_status` instances, while the VM link is instance 5, so that field could not register it. Commander's own `gcs_connection_lost` cleared at link-up and stayed clear through the +5 s return. This leans toward the heartbeat not being the cause, but it is not adopted as a verdict. | [`HEARTBEAT_DIAGNOSTIC.md`](reports/vm-venue/HEARTBEAT_DIAGNOSTIC.md); review in [erratum §5](reports/vm-venue/ERRATUM-2026-10-24.md) |
 
 **Status: open.** By the prediction fixed before the runs, the difference lies in the
 transport/link setup, which has not been characterized. Known differences between the venues'
@@ -160,7 +210,7 @@ setups:
 | | vermithor | VM |
 |---|---|---|
 | MAVLink transport | UDP (`udpin:0.0.0.0:14550`), MAVLink instance 0, `data_source=2` | serial PTY via `socat`, extra MAVLink instance, `data_source=7` |
-| GCS heartbeat from harness | 1 Hz, whole run | **none sent**, per the driver code (unverified in VM logs; [erratum §3](reports/vm-venue/ERRATUM-2026-10-24.md)) |
+| GCS heartbeat from harness | 1 Hz, whole run | **none sent** in the scored batch (confirmed in VM logs: `gcs_connection_lost` = 1 for the whole run); tested separately in the heartbeat diagnostic |
 | `COM_RC_IN_MODE` | 1 (explicit) | 3 (default) |
 | `RC_MAP_*` | defaults | set to 1/2/3/4 |
 | Parameter handling | persistent rootfs; full explicit set applied and read back every run | fresh rootfs per run; `NAV_RCL_ACT` + `RC_MAP_*` set |
@@ -170,10 +220,18 @@ setups:
 **Next step if anyone reopens this (not planned).** From Build B's source, after the failsafe has
 engaged, a return to POSCTL needs either manual control regained or a mode-change request treated
 as a user takeover. On the VM, manual control was **not** regained when POSCTL resumed (smoke_B3:
-lost-flag set until 57.62 s, POSCTL at 28.89 s). The VM's ULogs should therefore be checked for:
-- `vehicle_command` 176 (or `SET_MODE`) after RC loss;
-- `vehicle_status.failsafe_and_user_took_over`;
-- `telemetry_status.heartbeat_type_gcs` and `failsafe_flags.gcs_connection_lost`.
+lost-flag set until 57.62 s, POSCTL at 28.89 s).
+
+The VM heartbeat diagnostic has since checked the obvious candidates in one VM run:
+- **no mode command** after RC loss (only the end-of-run land command);
+- `failsafe_and_user_took_over` = 0 throughout;
+- user intention POSCTL throughout.
+
+That rules out both known source paths for that run. So whatever clears the failsafe at +5 s on
+the VM is not one of the two mechanisms identified from source. Still open:
+- a VM rerun of the heartbeat test that confirms registration through `gcs_connection_lost`;
+- a logged comparison of the VM's and vermithor's failsafe state (`vehicle_status.failsafe`,
+  `failsafe_flags`) at the +5 s instant.
 
 ## Prerequisites
 
@@ -461,7 +519,9 @@ its ULogs are identified in its reports.
 - `analyze_ulog.py` mislabels nav_state values ≥ 6.
 - `batch_run.py`'s `departed_rtl` field has no window limit.
 - The docstrings name the wrong stream type.
-- The drivers send no GCS heartbeat.
+- The drivers send no GCS heartbeat (now confirmed in VM logs).
+- The step-1 gauge of the VM heartbeat diagnostic could not observe the VM's MAVLink instance
+  (§5).
 
 None of these changes the VM gate. The first changes the published invalid-run sequences.
 
@@ -497,8 +557,9 @@ reports/vermithor/
 reports/vm-venue/
   PHASE0_REPORT.md                VM environment, commit verification, baseline, smokes
   BATCH_REPORT.md                 VM scored batch
-  DISCRIMINATING_TEST_COM_RC_IN_MODE.md   VM post-experiment diagnostic
-  ERRATUM-2026-10-24.md           review notes on the VM bundle (written on vermithor)
+  DISCRIMINATING_TEST_COM_RC_IN_MODE.md   VM post-experiment diagnostic (COM_RC_IN_MODE=1)
+  HEARTBEAT_DIAGNOSTIC.md         VM post-experiment diagnostic (1 Hz GCS heartbeat), as received
+  ERRATUM-2026-10-24.md           review notes on the VM bundle and the heartbeat diagnostic (written on vermithor)
 evidence/vermithor/
   scored/<A|B>-NN/                run.json, score.json, ulog_check.txt, params_applied.txt, scenario_events.json, run_once.out
   scored/batch-A.jsonl, batch-B.jsonl   attempt-by-attempt batch log
